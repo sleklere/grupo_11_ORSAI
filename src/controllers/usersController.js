@@ -43,8 +43,11 @@ const controller = {
 
         // Si la contraseña es correcta
         if (correctPassword) {
+          console.log(userToLogin);
           delete userToLogin.password;
           req.session.loggedUser = userToLogin;
+          console.log(userToLogin);
+          console.log(req.session.loggedUser);
           // COOKIES
           if (req.body.remember) {
             // expiración de las cookies = 7 días
