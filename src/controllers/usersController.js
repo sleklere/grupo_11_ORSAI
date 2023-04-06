@@ -44,8 +44,8 @@ const controller = {
         // Si la contraseña es correcta
         if (correctPassword) {
           console.log(userToLogin);
-          delete userToLogin.password;
-          req.session.loggedUser = userToLogin;
+          delete userToLogin.dataValues.password;
+          req.session.loggedUser = userToLogin.dataValues;
           console.log(userToLogin);
           console.log(req.session.loggedUser);
           // COOKIES
