@@ -1,5 +1,5 @@
 const authAdmin = function (req, res, next) {
-  if (req.session.loggedUser?.category.name !== "admin") {
+  if (req.session.loggedUser?.idUserCategory !== 0) {
     return res.redirect("/");
   }
   next();
